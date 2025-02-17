@@ -38,9 +38,9 @@ const ReferralModal = ({ isOpen, onClose }) => {
     setSuccess(null);
 
     try {
-      const response = await axios.post("https://backend-3-icti.onrender.com/refer", formData);
+      const response = await axios.post("https://accredian-backend-task-h5zh.onrender.com/refer", formData);
       setSuccess("Referral submitted successfully!");
-      console.log("Response:", response.data);
+      alert(response.data.message);
 
       setFormData({
         referrerName: "",
